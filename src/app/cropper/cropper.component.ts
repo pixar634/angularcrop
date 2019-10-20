@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ModalDirective } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-cropper',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cropper.component.css']
 })
 export class CropperComponent implements OnInit {
+  @ViewChild('childModal', { static: false }) childModal: ModalDirective;
 
   constructor() { }
 
   ngOnInit() {
+  }
+  showChildModal(): void {
+    this.childModal.show();
+  }
+ 
+  hideChildModal(): void {
+    this.childModal.hide();
   }
 
 }
