@@ -6,17 +6,25 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GalleryComponent } from './gallery/gallery.component';
 import { CropperComponent } from './cropper/cropper.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { CropContainerComponent } from './crop-container/crop-container.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     GalleryComponent,
-    CropperComponent
+    CropperComponent,
+    CropContainerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ModalModule.forRoot()
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
