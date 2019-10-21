@@ -1,8 +1,14 @@
-<div class="col-sm-12">
+<div class="row">
         <div class="col-sm-8">
                 <img #image [src]="attachURL" crossorigin width="100%"/>
         </div>
         <div class="col-sm-4">
-            <img [src]="imageDestination">
+            <ul>
+                <li>X coordinate: {{xcoordinate}}</li>
+                <li>Y coordinate: {{ycoordinate}}</li>
+                <li>Width: {{width}}</li>
+                <li>Height: {{height}}</li>
+            </ul>
+            
         </div>
     </div>
