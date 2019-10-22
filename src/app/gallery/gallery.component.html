@@ -1,9 +1,8 @@
 <!-- Page Content -->
 <div class="container">
-  <div class="file btn btn-lg btn-primary">
-    Upload
-    <input type="file" name="file"/>
-  </div>
+  <div class="addimage">
+    <button class="btn btn-outline-dark" (click)="openAddModal()">Add Image </button>
+</div>
   <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Gallery</h1>
 
   <hr class="mt-2 mb-5">
@@ -15,6 +14,19 @@
     </div>
    
   </div>
+  <ng-template #addFileTemplate>
+    <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel12"><i class="fa fa-user"></i> Add New Images</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <!-- <app-add-new-documents [currentPatient]="currentPatient" [currentPatientID]="currentPatientID"
+            [doctorID]="doctorID" (closeModal)="closeModal($event)" (showLoaderNow)="showLoaderNow($event)" [allDocuments]="allDocuments"></app-add-new-documents> -->
+            <app-add-new-image></app-add-new-image>
+    </div>
+</ng-template>
 
 </div>
 <!-- /.container -->

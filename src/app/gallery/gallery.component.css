@@ -1,20 +1,6 @@
 .addimage {
   float: right;
 }
-div {
-  position: relative;
-  overflow: hidden;
-  float: right;
-}
-input {
-  position: absolute;
-  font-size: 50px;
-  opacity: 0;
-  right: 0;
-  top: 0;
-  float: right;
-}
-
 .zoom:hover {
   -webkit-transform: scale(1.05, 1.05);
   transform: scale(1.05, 1.05);

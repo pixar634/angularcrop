@@ -8,6 +8,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { CropperComponent } from './cropper/cropper.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { CropContainerComponent } from './crop-container/crop-container.component';
+import { AddNewImageComponent } from './add-new-image/add-new-image.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,13 +19,17 @@ import { CropContainerComponent } from './crop-container/crop-container.componen
     AppComponent,
     GalleryComponent,
     CropperComponent,
-    CropContainerComponent
+    CropContainerComponent,
+    AddNewImageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
+
     
   ],
   providers: [],
