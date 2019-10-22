@@ -9,5 +9,23 @@
                 <li>Width: {{width}}</li>
                 <li>Height: {{height}}</li>
             </ul>
+            
+                    <form [formGroup]="labelform" (ngSubmit)="onSubmit()">
+
+                            <div class="form-group">
+                                            <input type="text" autocomplete="off" formControlName="label"
+                                            class="form-control"
+                                            [ngClass]="{ 'is-invalid': submitted && f.label.errors }"
+                                            id="title" placeholder="Label goes here*">
+                                    <div *ngIf="submitted && f.label.errors"
+                                            class="invalid-feedback">
+                                            <div *ngIf="f.label.errors.required">Label is required*
+                                            </div>
+                                    </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Finish Uploading</button>
+                    </form>
+            
+           
         </div>
     </div>

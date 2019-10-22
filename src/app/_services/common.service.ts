@@ -11,9 +11,19 @@ export class CommonService {
 
   constructor(private http: HttpClient) { }
 
-  saveImage() {
+  saveCroppedImage(param){
     return this.http
-      .get<any>(`localhost/api/uploadFile`);
+        .post<any>(`localhost/api/saveImage`, param )
+  }
+
+  saveUploadedImages(param){
+    return this.http
+        .post<any>(`localhost/api/uploadFile`, param )
+  }
+
+  getAllImages() {
+    return this.http
+      .get<any>(`localhost/api/getAllImages`);
   }
   
 }

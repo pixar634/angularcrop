@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ViewChild, TemplateRef,ElementRef } from '@angular/core';
 import Cropper from "cropperjs";
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-crop-container',
@@ -10,6 +11,7 @@ export class CropContainerComponent implements OnInit {
   @ViewChild('image', {static: false}) 
   private imageElement: ElementRef<any>;
 
+
   public attachURL: string = '../assets/img/2.png'
   private cropper:Cropper;
   public imageSource:string;
@@ -19,13 +21,18 @@ export class CropContainerComponent implements OnInit {
   public ycoordinate:any;
   public width:any;
   public height:any;
+  labelform: FormGroup;
 
-
-  constructor() { 
+  constructor(
+    private formBuilder: FormBuilder,
+  ) { 
     this.imageDestination="";
   }
 
   ngOnInit() {
+    this.labelform = this.formBuilder.group({
+      label: [''] 
+    });
   }
   ngAfterViewInit(){
     this.cropper= new Cropper(this.imageElement.nativeElement,{
@@ -44,5 +51,15 @@ export class CropContainerComponent implements OnInit {
       }
     });
   }
+
+  onSubmit(){
+    let param =this.labelform.value;
+    param.xcoordinate=this.xcoordinate;
+    param.ycoordinate=this.ycoordinate;
+    param.width=this.width;
+    param.height=this.height;
+    console.log("PARAMSSSS>>>",param);
+  }
+
 
 }
