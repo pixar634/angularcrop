@@ -2,6 +2,7 @@ import { Component, OnInit, Input, ViewChild, TemplateRef,ElementRef } from '@an
 import Cropper from "cropperjs";
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
+declare var $: any;
 @Component({
   selector: 'app-crop-container',
   templateUrl: './crop-container.component.html',
@@ -47,9 +48,12 @@ export class CropContainerComponent implements OnInit {
         this.ycoordinate=this.details.y;
         this.width=this.details.width;
         this.height=this.details.height;
-        console.log(">>>>>>>>>",this.details);
+        console.log(">>>>>>>>>",this.imageDestination);
       }
     });
+  }
+  addLabel(e){
+    console.log("e");
   }
 
   onSubmit(){
