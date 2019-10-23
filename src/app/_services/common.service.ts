@@ -13,17 +13,17 @@ export class CommonService {
 
   saveCroppedImage(param){
     return this.http
-        .post<any>(`localhost/api/saveImage`, param )
+        .post<any>(`http://localhost/Cropper-master/api/saveImage`, param )
   }
 
   saveUploadedImages(param){
     return this.http
-        .post<any>(`localhost/api/uploadFile`, param )
+        .post<any>(`http://localhost/Cropper-master/api/uploadFile`, param )
   }
 
-  getAllImages() {
+  fetchImages() {
     return this.http
-      .get<any>(`localhost/api/getAllImages`);
+      .get<any>(`http://localhost/Cropper-master/api/getAllImages`);
   }
   
 }

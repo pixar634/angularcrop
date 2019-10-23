@@ -1,6 +1,9 @@
 <div class="row">
         <div class="col-sm-8">
-                <img #image [src]="attachURL"  (mouseup)="addLabel($event)"  crossorigin width="100%"/>
+        <!-- <div [innerHtml]='imagetag'>
+        </div> -->
+        <img #image [src]="attachURL"  (mouseup)="addLabel($event)"  crossorigin width="100%"/>
+                
         </div>
         <div class="col-sm-4">
             <ul>
