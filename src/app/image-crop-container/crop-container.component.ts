@@ -19,7 +19,8 @@ declare var $: any;
 })
 export class CropContainerComponent implements OnInit {
   @Input() image;
-  @ViewChild("image", { static: false })
+
+  @ViewChild("imageViewer", { static: false })
   private imageElement: ElementRef<any>;
 
   private cropper: Cropper;
