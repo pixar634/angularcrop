@@ -35,7 +35,6 @@ export class AddNewImageComponent implements OnInit {
       image: this.selectedFiles,
       label: this.f.label.value
     };
-    console.log("PARAMZZZZ", params);
 
     this.commonService.saveUploadedImages(params).subscribe(
       data => {

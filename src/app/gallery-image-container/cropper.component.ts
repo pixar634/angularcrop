@@ -1,10 +1,8 @@
 import {
   Component,
   OnInit,
-  Input,
   ViewChild,
-  TemplateRef,
-  ElementRef
+  TemplateRef
 } from "@angular/core";
 import { BsModalService, BsModalRef } from "ngx-bootstrap/modal";
 import { CommonService } from "../_services/common.service";
@@ -22,12 +20,11 @@ export class CropperComponent implements OnInit {
   public attachURL: string = "../assets/img/2.jpg";
 
   constructor(
-    private modalService: BsModalService,
-    private commonService: CommonService
+    private modalService: BsModalService
   ) {}
 
   ngOnInit() {
-    // this.getImages();
+    
   }
 
   openViewr() {
