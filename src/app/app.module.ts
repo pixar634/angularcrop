@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GalleryComponent } from './gallery/gallery.component';
 import { CropperComponent } from './gallery-image-container/cropper.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { CropContainerComponent } from './crop-container/crop-container.component';
+import { CropContainerComponent } from './image-crop-container/crop-container.component';
 import { AddNewImageComponent } from './add-new-image/add-new-image.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
