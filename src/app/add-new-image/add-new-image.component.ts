@@ -10,6 +10,7 @@ import { CommonService } from "../_services/common.service";
 export class AddNewImageComponent implements OnInit {
   uploadForm: FormGroup;
   selectedFiles: FileList;
+  image_collection: any;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -23,6 +24,9 @@ export class AddNewImageComponent implements OnInit {
   }
   selectFile(event) {
     this.selectedFiles = event.target.files;
+    this.image_collection={
+
+    }
     console.log("FILE>>>>", this.selectedFiles);
   }
 
@@ -35,6 +39,7 @@ export class AddNewImageComponent implements OnInit {
       image: this.selectedFiles,
       label: this.f.label.value
     };
+    console.log("PARAMSSS",params);
 
     this.commonService.saveUploadedImages(params).subscribe(
       data => {
